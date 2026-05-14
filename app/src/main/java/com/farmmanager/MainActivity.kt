@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.annotation.StringRes
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
@@ -260,6 +261,8 @@ fun FarmApp(viewModel: FarmViewModel) {
     var editingSale by remember { mutableStateOf<SaleEntity?>(null) }
     var selectedModule by remember { mutableStateOf(FarmModuleTab.Agri) }
     var selectedAgriTab by remember { mutableStateOf(FarmTab.Dashboard) }
+    var showExitDialog by remember { mutableStateOf(false) }
+    val activity = LocalContext.current as? ComponentActivity
     val moduleTheme = selectedModule.themeColors()
     var pendingExportSection by remember { mutableStateOf<DataSection?>(null) }
     var pendingImportSection by remember { mutableStateOf<DataSection?>(null) }
@@ -291,6 +294,44 @@ fun FarmApp(viewModel: FarmViewModel) {
             snackbarHostState.showSnackbar(it)
             viewModel.onIntent(FarmIntent.ClearStatus)
         }
+    }
+
+    val atAgriDashboard = selectedModule == FarmModuleTab.Agri && selectedAgriTab == FarmTab.Dashboard
+    BackHandler(enabled = true) {
+        when {
+            showExitDialog -> showExitDialog = false
+            dialog != null -> dialog = null
+            editingCrop != null -> editingCrop = null
+            editingExpense != null -> editingExpense = null
+            editingHarvest != null -> editingHarvest = null
+            editingSale != null -> editingSale = null
+            !atAgriDashboard -> {
+                selectedModule = FarmModuleTab.Agri
+                selectedAgriTab = FarmTab.Dashboard
+            }
+            else -> showExitDialog = true
+        }
+    }
+
+    if (showExitDialog) {
+        AlertDialog(
+            onDismissRequest = { showExitDialog = false },
+            title = { Text(stringResource(R.string.exit_app_title)) },
+            text = { Text(stringResource(R.string.exit_app_message)) },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        showExitDialog = false
+                        activity?.finishAffinity()
+                    },
+                ) { Text(stringResource(R.string.exit_app_confirm)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showExitDialog = false }) {
+                    Text(stringResource(R.string.exit_app_cancel))
+                }
+            },
+        )
     }
 
     Scaffold(

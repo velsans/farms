@@ -99,4 +99,9 @@
         <item>Harvest Management</item>
         <item>Other</item>
     </string-array>
+
+    <string name="exit_app_title">Exit app?</string>
+    <string name="exit_app_message">Do you want to close Farm Manager?</string>
+    <string name="exit_app_confirm">Exit</string>
+    <string name="exit_app_cancel">Stay</string>
 </resources>
