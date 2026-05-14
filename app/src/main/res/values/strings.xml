@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Farm Manager</string>
+    <string name="action_import">Import</string>
+    <string name="action_export">Export</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_add_content_description">Add %1$s</string>
+    <string name="action_share_latest_excel">Share latest Excel report</string>
+    <string name="action_share_excel_external">Share Excel through WhatsApp or other apps</string>
+
+    <string name="search_profit_loss">Search Profit/Loss</string>
+    <string name="search_crops">Search Crops</string>
+    <string name="search_expenses">Search Expenses</string>
+    <string name="search_harvest">Search Harvest</string>
+    <string name="search_sales">Search Sales</string>
+
+    <string name="crop_total">Crop Total</string>
+    <string name="expense_total">Expense Total</string>
+    <string name="harvest_total">Harvest Total</string>
+    <string name="sales_total">Sales Total</string>
+    <string name="expenses_metric">Expenses</string>
+    <string name="sales_metric">Sales</string>
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_crops">Crops</string>
+    <string name="tab_expenses">Expenses</string>
+    <string name="tab_harvest">Harvest</string>
+    <string name="tab_sales">Sales</string>
+    <string name="tab_reports">Reports</string>
+    <string name="module_agri">Agri</string>
+    <string name="module_goat">Goat</string>
+    <string name="module_chicken">Chicken</string>
+    <string name="module_agri_title">Agriculture Profit</string>
+    <string name="module_goat_title">Goat Farming</string>
+    <string name="module_chicken_title">Chicken Farming</string>
+    <string name="module_agri_subtitle">Crop expenses, harvest, sales and profit/loss</string>
+    <string name="module_goat_subtitle">Coming soon: goat expenses, sales and profit/loss</string>
+    <string name="module_chicken_subtitle">Coming soon: chicken expenses, sales and profit/loss</string>
+    <string name="month_placeholder">Month</string>
+    <string name="all_months">All Months</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="zero_rupees">Rs. 0.00</string>
+    <string name="future_module_title">%1$s dashboard tabs</string>
+    <string name="future_module_subtitle">Dashboard, expenses, sales, reports, Excel import/export and sharing will follow the same offline pattern as Agri.</string>
+    <string name="expenses_title">Expenses</string>
+    <string name="harvest_management_title">Harvest Management</string>
+    <string name="offline_report_title">Offline Report</string>
+
+    <string name="crop_count">%1$d crops</string>
+    <string name="entry_count">%1$d entries</string>
+    <string name="area_acres">%1$.2f acres</string>
+    <string name="crop_details_format">%1$s | %2$s | %3$s acres | %4$s</string>
+    <string name="expense_title_format">%1$s%2$s</string>
+    <string name="expense_round_format"> #%1$d</string>
+    <string name="expense_subtitle_format">%1$s | %2$s</string>
+    <string name="harvest_title_format">%1$s harvest</string>
+    <string name="harvest_subtitle_format">%1$s | %2$s</string>
+    <string name="sale_title_format">%1$s bought %2$s</string>
+    <string name="sale_subtitle_format">%1$s | %2$s x %3$s/kg | %4$s</string>
+    <string name="summary_subtitle_format">Harvested %1$s | Income %2$s | Expenses %3$s</string>
+    <string name="report_subtitle_format">Income %1$s - Expenses %2$s</string>
+    <string name="profit_loss_title_format">%1$s Profit/Loss</string>
+    <string name="profit_loss_subtitle_format">All-time %1$s | %2$d crops | %3$s harvested</string>
+
+    <string name="dialog_add_crop">Add Crop</string>
+    <string name="dialog_edit_crop">Edit Crop</string>
+    <string name="dialog_add_expense">Add Expense</string>
+    <string name="dialog_edit_expense">Edit Expense</string>
+    <string name="dialog_add_harvest">Add Harvest</string>
+    <string name="dialog_edit_harvest">Edit Harvest</string>
+    <string name="dialog_add_sale">Add Sale</string>
+    <string name="dialog_edit_sale">Edit Sale</string>
+
+    <string name="field_crop_name">Crop name</string>
+    <string name="field_variety">Variety</string>
+    <string name="field_field_name">Field name</string>
+    <string name="field_area_acres">Area in acres</string>
+    <string name="field_season">Season</string>
+    <string name="field_sowing_date">Sowing date</string>
+    <string name="field_application_round">Application round (2 or 3 for fertilizer, optional)</string>
+    <string name="field_amount">Amount</string>
+    <string name="field_expense_date">Expense date</string>
+    <string name="field_notes">Notes</string>
+    <string name="field_harvest_quantity">Harvest quantity kg</string>
+    <string name="field_harvest_date">Harvest date</string>
+    <string name="field_management_notes">Management notes</string>
+    <string name="field_quantity_kg">Quantity kg</string>
+    <string name="field_price_per_kg">Price per kg</string>
+    <string name="field_buyer_name">Buyer name</string>
+    <string name="field_buyer_phone">Buyer phone</string>
+    <string name="field_sale_date">Sale date</string>
+    <string name="select_crop">Select crop</string>
+
+    <string name="expense_category_seed">Seed</string>
+    <string-array name="expense_categories">
+        <item>Seed</item>
+        <item>Fertilizer</item>
+        <item>Labor</item>
+        <item>Water Irrigation Labor</item>
+        <item>Harvest Management</item>
+        <item>Other</item>
+    </string-array>
+</resources>
