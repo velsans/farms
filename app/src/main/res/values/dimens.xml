@@ -28,4 +28,7 @@
     <dimen name="submenu_height">62dp</dimen>
     <dimen name="action_button_height">54dp</dimen>
     <dimen name="grid_min_cell">280dp</dimen>
+
+    <!-- Adaptive launcher icon foreground inset (safe zone vs 108dp canvas) -->
+    <dimen name="ic_launcher_foreground_inset">18dp</dimen>
 </resources>
